@@ -26,6 +26,22 @@ const Product = ({ item }) => {
 
 export default Product;
 
+const Info = styled.div`
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 250ms;
+  cursor: pointer;
+`;
+
 const Container = styled.div`
   flex: 1;
   width: 350px;
@@ -36,6 +52,10 @@ const Container = styled.div`
   align-items: center;
   background-color: #f5fbfd;
   position: relative;
+
+  &:hover ${Info} {
+    opacity: 1;
+  }
 `;
 
 const Circle = styled.div`
@@ -49,19 +69,6 @@ const Circle = styled.div`
 const Image = styled.img`
   height: 75%;
   z-index: 2;
-`;
-
-const Info = styled.div`
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.2);
 `;
 
 const Icon = styled.div`
