@@ -67,7 +67,7 @@ export const sliderItems = [
     },
     {
       id:7,
-      img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+      img:"https://www.vintageindustries.nl/download_front/xyjgls1514/_overview_large_/3013P_Redstone_hooded_sweater_Woodland_2_.png",
     },
     {
       id:8,
