@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { mobile } from '../responsive';
 
 function Navbar() {
   return (
@@ -11,12 +12,12 @@ function Navbar() {
         <Left>
           <Languages>EN</Languages>
           <SearchContainer>
-            <Input />
+            <Input placeholder="search" />
             <SearchIcon style={{ color: 'gray', fontSize: 14 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Ecommerce Store</Logo>
+          <Logo>Ecom</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
@@ -36,6 +37,7 @@ export default Navbar;
 
 const Container = styled.div`
   height: 70px;
+  ${mobile({ height: '50px', marginBottom: '20px' })}
 `;
 
 const Wrapper = styled.div`
@@ -43,6 +45,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ padding: '10px 0' })}
 `;
 
 const Left = styled.div`
@@ -54,6 +57,7 @@ const Left = styled.div`
 const Languages = styled.span`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({ display: 'none' })}
 `;
 
 const SearchContainer = styled.div`
@@ -65,6 +69,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  ${mobile({ width: '50px' })}
 `;
 
 const Center = styled.div`
@@ -74,6 +79,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  ${mobile({ fontSize: '24px' })}
 `;
 
 const Right = styled.div`
@@ -81,10 +87,12 @@ const Right = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  ${mobile({ justifyContent: 'center', flex: 2 })}
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  ${mobile({ marginLeft: '10px', fontSize: '12px' })}
 `;

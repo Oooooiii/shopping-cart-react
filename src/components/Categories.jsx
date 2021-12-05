@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CategoryItem from './CategoryItem';
 import { categories } from '../data';
+import { mobile } from '../responsive';
 
 function Categories() {
   return (
@@ -19,4 +20,5 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  ${mobile({ padding: '0px', flexDirection: 'column' })}
 `;
